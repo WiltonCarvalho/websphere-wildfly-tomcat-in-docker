@@ -1,0 +1,22 @@
+services:
+  wildfly:
+    build:
+      context: .
+      dockerfile: Dockerfile.wildfly
+    ports:
+      - 8081:8080
+    network_mode: bridge
+  tomcat:
+    build:
+      context: .
+      dockerfile: Dockerfile.tomcat
+    ports:
+      - 8082:8080
+    network_mode: bridge
+  websphere:
+    build:
+      context: .
+      dockerfile: Dockerfile.websphere
+    ports:
+      - 8083:8080
+    network_mode: bridge
